@@ -16,7 +16,8 @@
 Git: fatal: unable to access 'https://github.com/LinYL03/Simple_Py_Code.git/': Failed to connect to github.com port 443 after 21054 ms: Couldn't connect to server
 ```
 
-好厚米的解释是：这个错误提示说明了 Git 在尝试连接 GitHub 时出现了问题。具体来说，它无法通过 HTTPS 访问 GitHub，因为无法连接到 github.com 的 443 端口，连接超时了。这可能是由于网络问题、防火墙设置、代理配置或 GitHub 服务器问题等原因引起的。要解决这个问题，你可以尝试以下几种方法：
+好厚米的解释是：
+这个错误提示说明了 Git 在尝试连接 GitHub 时出现了问题。具体来说，它无法通过 HTTPS 访问 GitHub，因为无法连接到 github.com 的 443 端口，连接超时了。这可能是由于网络问题、防火墙设置、代理配置或 GitHub 服务器问题等原因引起的。要解决这个问题，你可以尝试以下几种方法：
 
 1. **检查网络连接**：确保你的网络连接正常，尝试使用浏览器访问 GitHub 网站来确认是否能够连接。
 2. **检查防火墙和代理设置**：如果你使用了防火墙或代理服务器，请确保其设置不会阻止 Git 连接到 GitHub。你可能需要配置防火墙或代理以允许 Git 的访问。
