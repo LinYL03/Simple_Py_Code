@@ -6,9 +6,63 @@
 
 一些简单的py代码
 
+## 爬虫练习
+
+#爬虫   #Python   #音乐
+
+爬虫代码 步骤
+
+1. 已知目标
+
+   获取什么数据，并且知道数据在哪？（URL）
+
+   通过F12检查数据的位置
+
+2. 构建思路
+
+   解析目标的数据结构，选择技术
+
+3. 爬取数据
+
+   编写代码。保存数据
+
+### request库
+
+Python中的HTTP请求库通常指的是 `requests` 库。`requests` 是一个简洁而友好的HTTP请求库，使得发送HTTP请求变得更加简单和直观。你可以使用 `requests` 库发送各种类型的HTTP请求，包括GET、POST、PUT、DELETE等，并处理响应数据。
+
+通过以下代码在终端安装
+
+```bash
+pip install requests
+```
+
+在python中使用
+
+```python
+import requests
+```
+
+在Bash中，你可以使用以下命令来查看已安装库的版本：
+
+```bash
+pip show <package_name>
+```
+
+显示有关 `<package_name>` 库的信息，包括版本号。
+
+
+
+### 防止反爬
+
+使用用户代理
+
+## 网页后端
+
+#后端   #go
+
 # 一些常见的问题
 
-## # 无法提交
+## Vs代码无法提交仓库
 
 当出现如下的报错信息时：
 
