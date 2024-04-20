@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>简单的 JavaScript 游戏示例</title>
+    <style>
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="gameCanvas" width="400" height="400"></canvas>
+    <script>
+        // 获取画布和上下文
+        var canvas = document.getElementById("gameCanvas");
+        var ctx = canvas.getContext("2d");
+
+        // 定义球的初始位置和速度
+        var x = canvas.width / 2;
+        var y = canvas.height - 30;
+        var dx = 2;
+        var dy = -2;
+
+        // 定义球的半径和颜色
+        var ballRadius = 10;
+        var ballColor = "#0095DD";
+
+        // 绘制球的函数
+        function drawBall() {
+            ctx.beginPath();
+            ctx.arc(x, y, ballRadius, 0, Math.PI * 2);
+            ctx.fillStyle = ballColor;
+            ctx.fill();
+            ctx.closePath();
+        }
+
+        // 更新球的位置
+        function update() {
+            // 清除画布
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            // 绘制球
+            drawBall();
+
+            // 更新球的位置
+            x += dx;
+            y += dy;
+
+            // 碰到边界时改变方向
+            if (x + dx > canvas.width - ballRadius || x + dx < ballRadius) {
+                dx = -dx;
+            }
+            if (y + dy < ballRadius) {
+                dy = -dy;
+            } else if (y + dy > canvas.height - ballRadius) {
+                // 游戏结束条件：球触底
+                alert("游戏结束！");
+                document.location.reload();
+            }
+        }
+
+        // 每 10 毫秒更新一次
+        setInterval(update, 10);
+    </script>
+</body>
+
+</html>
